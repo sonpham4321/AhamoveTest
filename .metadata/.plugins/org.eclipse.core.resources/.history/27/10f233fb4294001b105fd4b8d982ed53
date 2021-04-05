@@ -1,0 +1,7 @@
+Feature: Register
+
+
+Scenario: Register new account
+Given go to sign up page
+When fill out account information
+Then complete register

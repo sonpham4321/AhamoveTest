@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="io.appium.java_client.service.local.AppiumDriverLocalService"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
+<fullyQualifiedTypeName name="io.appium.java_client.remote.MobileCapabilityType"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.interactions.internal.TouchAction"/>
+<fullyQualifiedTypeName name="io.appium.java_client.TouchAction"/>
+<fullyQualifiedTypeName name="io.appium.java_client.touch.TapOptions"/>
+<fullyQualifiedTypeName name="io.appium.java_client.android.nativekey.AndroidKey"/>
+<fullyQualifiedTypeName name="io.appium.java_client.android.nativekey.KeyEvent"/>
+<fullyQualifiedTypeName name="io.appium.java_client.android.AndroidDriver"/>
+<fullyQualifiedTypeName name="io.appium.java_client.android.AndroidElement"/>
+<fullyQualifiedTypeName name="io.appium.java_client.pagefactory.AppiumFieldDecorator"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
+<fullyQualifiedTypeName name="io.appium.java_client.pagefactory.AndroidFindBy"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="PageObjects.LandingPage"/>
+<fullyQualifiedTypeName name="PageObjects.SignUpPage"/>
+<fullyQualifiedTypeName name="io.appium.java_client.pagefactory.AndroidFindBys"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="PageObjects.BussinessTypePage"/>
+<fullyQualifiedTypeName name="PageObjects.InvidialPage"/>
+<fullyQualifiedTypeName name="PageObjects.LoginPage"/>
+<fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
+<fullyQualifiedTypeName name="io.cucumber.java.en.Given"/>
+<fullyQualifiedTypeName name="io.cucumber.java.en.When"/>
+<fullyQualifiedTypeName name="io.cucumber.java.en.Then"/>
+<fullyQualifiedTypeName name="cucumber.api.junit.Cucumber"/>
+<fullyQualifiedTypeName name="io.cucumber.junit.CucumberOptions"/>
+<fullyQualifiedTypeName name="FrameWork.base"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="io.cucumber.junit.Cucumber"/>
+</qualifiedTypeNameHistroy>

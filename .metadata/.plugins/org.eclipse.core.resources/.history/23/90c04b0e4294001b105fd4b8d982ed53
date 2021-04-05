@@ -1,0 +1,30 @@
+package stepDefinations;
+
+import PageObjects.LandingPage;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class register {
+	
+	AndroidDriver<AndroidElement> driver=capabilities("AhaMoveApp");
+	
+    @Given("^go to sign up page$")
+    public void go_to_sign_up_page() throws Throwable {
+        
+    	LandingPage landingPage = new LandingPage(driver);
+    	landingPage.RegisterButton.click();
+    }
+
+    @When("^fill out account information$")
+    public void fill_out_account_information() throws Throwable {
+        
+    }
+
+    @Then("^complete register$")
+    public void complete_register() throws Throwable {
+    
+    }
+}

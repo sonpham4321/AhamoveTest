@@ -1,0 +1,51 @@
+package FrameWork;
+
+import java.io.IOException;
+import org.testng.annotations.Test;
+
+import FrameWork.base;
+import PageObjects.BussinessTypePage;
+import PageObjects.InvidialPage;
+import PageObjects.LandingPage;
+import PageObjects.LoginPage;
+import PageObjects.SignUpPage;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+
+public class RegistrationAndLogin extends base{
+
+	@Test
+	public void Registration_Test() throws IOException
+	{
+		AndroidDriver<AndroidElement> driver=capabilities("AhaMoveApp");
+		LandingPage landingPage = new LandingPage(driver);
+		SignUpPage signUpPage = new SignUpPage(driver);
+		BussinessTypePage bussinessTypePage = new BussinessTypePage(driver);
+		InvidialPage invidialPage = new InvidialPage(driver);
+		
+		landingPage.RegisterButton.click();
+		signUpPage.NameTextBox.sendKeys("Pham Vu Lam Truong Son");
+		signUpPage.PhoneTextBox.sendKeys("0973591723");
+		signUpPage.EmailTextBox.sendKeys("sonphamlearning221@gmail.com");
+		signUpPage.Categories.click();
+		bussinessTypePage.Types.get(0).click();
+		invidialPage.OtherIndival.click();
+		invidialPage.SaveButton.click();
+		signUpPage.CodeTextBox.sendKeys("700000");
+		signUpPage.SignUpButton.click();
+	}
+	
+	@Test
+	public void Login_Test() throws IOException
+	{
+		LandingPage landingPage = new LandingPage(driver);
+		LoginPage loginPage = new LoginPage(driver);
+		
+		AndroidDriver<AndroidElement> driver=capabilities("AhaMoveApp");
+		landingPage.LoginButton.click();
+		loginPage.PhoneNumber.sendKeys("0973591723");
+		((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
+	}
+}

@@ -1,0 +1,39 @@
+package FrameWork;
+
+import java.io.IOException;
+import org.testng.annotations.Test;
+
+import PageObjects.LandingPage;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+
+public class RegistrationAndLogin extends base{
+
+	@Test
+	public void Registration_Test() throws IOException
+	{
+		AndroidDriver<AndroidElement> driver=capabilities("AhaMoveApp");
+		LandingPage landingPage = new LandingPage(driver);
+		landingPage.RegisterButton.click();
+		driver.findElementById("com.ahamove.user:id/phoneEdit").sendKeys("Pham Vu Lam Truong Son");
+		driver.findElementById("com.ahamove.user:id/phoneEdit").sendKeys("0973591723");
+		driver.findElementById("com.ahamove.user:id/editText").sendKeys("sonphamlearning221@gmail.com");
+		driver.findElementByXPath("//*[@text='Select your account category']").click();
+		driver.findElementsById("com.ahamove.user:id/next_img").get(0).click();
+		driver.findElementByXPath("//*[@text='Other']").click();
+		driver.findElementById("com.ahamove.user:id/layoutSaveButton").click();
+		driver.findElementByXPath("//*[@text='Referral code (Not required)']").sendKeys("700000");
+		driver.findElementById("com.ahamove.user:id/submitBtn").click();
+	}
+	
+	@Test
+	public void Login_Test() throws IOException
+	{
+		AndroidDriver<AndroidElement> driver=capabilities("AhaMoveApp");
+		driver.findElementById("com.ahamove.user:id/btnLogin").click();
+		driver.findElementById("com.ahamove.user:id/editText").sendKeys("0973591723");
+		((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.ENTER));
+	}
+}

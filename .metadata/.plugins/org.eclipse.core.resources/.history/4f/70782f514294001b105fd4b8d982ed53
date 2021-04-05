@@ -1,0 +1,50 @@
+package stepDefinations;
+
+import FrameWork.base;
+import PageObjects.BussinessTypePage;
+import PageObjects.InvidialPage;
+import PageObjects.LandingPage;
+import PageObjects.SignUpPage;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class register extends base{
+	
+	AndroidDriver<AndroidElement> driver;
+	
+    @Given("^go to sign up page$")
+    public void go_to_sign_up_page() throws Throwable {
+        
+    	driver=capabilities("AhaMoveApp");
+    	LandingPage landingPage = new LandingPage(driver);
+    	landingPage.RegisterButton.click();
+    }
+
+    @When("^fill out account information$")
+    public void fill_out_account_information() throws Throwable {
+        
+    	SignUpPage signUpPage = new SignUpPage(driver);
+		BussinessTypePage bussinessTypePage = new BussinessTypePage(driver);
+		InvidialPage invidialPage = new InvidialPage(driver);
+		
+		signUpPage.NameTextBox.sendKeys(name);
+		signUpPage.PhoneTextBox.sendKeys(phoneNumber);
+		signUpPage.EmailTextBox.sendKeys(email);
+		signUpPage.Categories.click();
+		bussinessTypePage.Types.get(0).click();
+		invidialPage.OtherIndival.click();
+		invidialPage.SaveButton.click();
+		signUpPage.CodeTextBox.sendKeys(code);
+    }
+
+    @Then("^complete register$")
+    public void complete_register() throws Throwable {
+    	
+    	SignUpPage signUpPage = new SignUpPage(driver);
+    	signUpPage.SignUpButton.click();
+    
+    }
+}
